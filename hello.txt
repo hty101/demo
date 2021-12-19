@@ -14,6 +14,6 @@ hello atguigu!hello git!
 hello atguigu!hello git!
 hello atguigu!hello git!
 hello atguigu!hello git!
-hello atguigu!hello git!
+hello atguigu!hello git!giteditor
 hello atguigu!hello git!master
 hello atguigu!hello git!hot-fix
