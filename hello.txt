@@ -18,3 +18,4 @@ hello atguigu!hello git!giteditor
 hello atguigu!hello git!master
 hello atguigu!hello git!hot-fix
 hello atguigu!hello git!git——ssh
+pullssh
