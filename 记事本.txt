@@ -1,0 +1,82 @@
+3.20
+环境搭建成功
+服务成功启动
+理解启动服务流程
+学习业务逻辑
+3.22
+学习接口逻辑
+
+
+
+http:
+	
+	request .params/.query/.body(data local in here)
+	.query include {
+		shop.name,
+		memo,
+		is_alive,
+		tags,
+		exclude_tag,
+	}
+
+	GET（SELECT）：从服务器取出资源（一项或多项）。
+	POST（CREATE）：在服务器新建一个资源。
+	PUT（UPDATE）：在服务器更新资源（客户端提供完整资源数据）。
+	PATCH（UPDATE）：在服务器更新资源（客户端提供需要修改的资源数据）。
+	DELETE（DELETE）：从服务器删除资源。
+
+js语法：
+
+	异常处理机制：
+		try-catch-finally
+
+
+	promise.all:
+		当所有的子Promise都按顺序执行完，该Promise完成，返回值是全部值的数组；
+		如果有任何一个失败，该Promise失败，返回值是第一个失败的子Promise的结果。
+
+	加async是想异步调用函数 ，启动多线程
+	使用await，将其修饰的语句变为单线程	
+
+	let	 ：块级作用域
+	const：不可改变量，类似与final
+
+
+	属性访问器：
+		A[B](C) => A中的B成员，B可以是方法名,C是方法参数，返回值为方法返回值    |   B也可以是属性，此时不存在C,返回值为A中的B属性
+		例：
+			class myClass {
+			    attribute = 3;
+			    myMethod(param) {
+			        console.log("this is myMethod,param:",param)
+			        return param
+			    }
+			}
+
+			var keyValue = new myClass()
+			console.log(keyValue["attribute"])
+			console.log(keyValue["myMethod"])
+			console.log(keyValue["myMethod"](200))
+			/*3
+			*[Function: myMethod]
+			*this is myMethod,param: 200
+			*200*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
