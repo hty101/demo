@@ -1,11 +1,42 @@
+2.28-3.17
+	协助开发TWAIN项目
 3.20
-环境搭建成功
-服务成功启动
-理解启动服务流程
-学习业务逻辑
-3.22
-学习接口逻辑
-
+	环境搭建成功
+	服务成功启动
+	理解启动服务流程
+	学习业务逻辑
+3.22-3.38
+	学习接口逻辑
+	学习相关知识		例：http协议、熟悉js语法
+	详见业务分析
+	了解项目整体架构
+3.29,3.30,3.31
+4.3,4.4,4.6,4.7
+	共7个工作日，请假
+4.10
+	通过文档熟悉直播业务具体流程
+4.11
+	配置开发环境√
+	增加web_content里beforePost参数校验√
+	创建input endpoint
+	创建 channal
+	运行 channal
+4.12
+	将input endpoint所返回的key与url存储至数据库中
+	增加schedule参数校验
+	增加开启直播后启动5s轮询任务：
+		getMessage
+		getProduct
+		getHighProduct
+	增加定时任务：
+		30分钟后判断live state
+4.13
+	测试新增的功能
+	增加版本控制（通过user-agent判断版本）
+	新增web_bambuser文件，监听bambuser的webhooks的post请求
+	更新status.json文件
+4.14
+	了解并学习单元测试
 
 
 http:
@@ -19,17 +50,36 @@ http:
 		exclude_tag,
 	}
 
+	.params与.query的区别
+	在地址栏进行拼接		作为？后的参数
+	例：
+	后端方法：	app.get("/test/:id", function(req, res) {...});
+	请求方法：	/test/2?username=zhangwuji
+		解析param可得到id = 2
+		解析query可得到username=zhangwuji
+
+
+
 	GET（SELECT）：从服务器取出资源（一项或多项）。
 	POST（CREATE）：在服务器新建一个资源。
 	PUT（UPDATE）：在服务器更新资源（客户端提供完整资源数据）。
 	PATCH（UPDATE）：在服务器更新资源（客户端提供需要修改的资源数据）。
 	DELETE（DELETE）：从服务器删除资源。
 
+node:
+	v12.8.0安装resitfy时安装node-gyp失败，错误信息显示其不支持python3.10，建议降低python版本
+	解决方案：单独安装node-gyp而后npm i
+
+
 js语法：
 
 	异常处理机制：
 		try-catch-finally
 
+	冒号的作用只有三种
+		1.表示成员
+		2.case：
+		3.三元条件语句
 
 	promise.all:
 		当所有的子Promise都按顺序执行完，该Promise完成，返回值是全部值的数组；
@@ -62,12 +112,43 @@ js语法：
 			*this is myMethod,param: 200
 			*200*/
 
+常用术语：
+	BD 	：基本设计（Base Design）
+	DD 	：详细设计（Detail Design）
+	UT 	：单元测试（Unit Testing）
+	CT 	：组件测试（Componented Testing）
+	TT 	：技术测试（Technical Testing）
+	IT 	：集成测试（Integration Testing）
+	ST 	：系统测试（System Testing）
+	UAT ：验收测试（User Acceptance Testing）
+	OP 	：发布（Operation）
+	QA 	：质量保证（Quality Assurance）
 
 
 
+k8s，全称为Kubernetes:
+	可为客户提供：
+		服务发现和负载均衡
+		存储编排（允许自动挂载选择的存储系统，例如本地存储、公共云提供商等）
+		自动部署及回滚
+		自动完成装箱计算
+		自我修复
+		密钥与配置管理（存储与管理敏感信息）
+
+Docker			 ：类似于轻量型虚拟机
+	容器（container）
+	镜像（image)
+	仓库（Repository）
+
+EsLint			 ：静态代码检查器
+	可以在.eslintrc.json中配置：
+		Environments ：指定脚本的运行环境。每种环境都有一组特定的预定义全局变量。
+		Globals 	 ：脚本在执行期间访问的额外的全局变量。
+		Rules 		 ：启用的规则及其各自的错误级别。
 
 
-
+Jenkins			 ：自动化部署框架
+	与git等版本控制中心结合，可达到将新发布的版本进行快速部署测试目的
 
 
 
